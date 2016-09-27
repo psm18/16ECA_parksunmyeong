@@ -30,4 +30,7 @@ print root_finding.sequential(func, 0.01)
 
 # bisection method 로 구하는 법은?
 
+
+
 # Newton Raphson method 로 구하는 법은?
+
