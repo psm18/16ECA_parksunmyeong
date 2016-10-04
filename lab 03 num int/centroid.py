@@ -44,7 +44,7 @@ def main():
 
     # 단면 표시
     pylab.fill_between(y_list, w_list)
-    #도심 위치에 수직선 표시
+    #도심 위치에 수직선 표시 axvline
     pylab.axvline(x=centroid, c='r')
 
     # 가로축 세로축 비율을 같게 함
