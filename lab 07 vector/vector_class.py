@@ -80,8 +80,8 @@ if __name__ == '__main__':
         u_meter_per_second = 60
         t = Vector(range(0, 123)) * 0.1
         s = u_meter_per_second * t + g_meter_per_second_per_second * 0.5 * (t ** 2)
-        plt.plot(t, s)
-        plt.show()
+        pit.plot(t, s)
+        pit.show()
 
 
     main()
