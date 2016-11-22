@@ -183,6 +183,34 @@ def cholesky_decomposition(mat_a):
         l_k = [0.0] * len(mat_a)
 
         # first column of k-th row of mat_l matirix
+        l_k[0] = mat_a[k][0] * l_00_i
+
+        # initialized square sum of k-th row
+        #   to caloulate diagonal element
+        square_sum = l_k[0] ** 2
+        # column loop before diagonal element
+        # i will have values 1 ~ (k -1)
+        for i in range(1, k):
+            # initialize mat_l[k][i] * mat_l[i][i] with mat_a[k][i]
+            #   later divide with mat_l[i][i] to get mat_l[k][i]
+            l_ki_l_ii mat_a[k][i]
+            # dummy index column loop
+            # j will have values 0 ~ (i-1)
+            # inverse of matrix multiplication
+            for j in range(i):
+                l_ki_l_ii += -mat_l[i][j] * l_k[j]
+            # divide with amt_l[i][i] to get mat_l[k][i]
+            l_k[i] = l_ki_l_ii / mat_l[i][i]
+
+            # accumulate square sum of mat_l[k][i]
+            #   to caloulate diagonal element
+            square_sum += l_k[i] ** 2
+
+        # diagonal element
+        l_k[k] = (mat_a[k][k] - square_sum) ** 0.5
+
+        # add k-th row to mat_l
+        mat_l
 
 
 
