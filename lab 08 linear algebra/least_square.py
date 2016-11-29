@@ -73,3 +73,30 @@ def visualize_least_square_first_order(a_hat, b_hat, vec_x, vec_y, vec_y_measure
     pylab.grid(True)
     pylab.legend(loc=0)
     pylab.show()
+
+
+def main():
+    n_data = 100
+
+    a = 0.5
+    b = 1.0
+
+    vec_x = [i * 0.1 for i in range(0, n_data)]
+    vec_y = [a* xi + b for xi in vec_x]
+
+    vec_y_measured = contaminate(vec_y)
+
+    mat_w = [[a], [b]]
+
+    mat_w_estimated = least_square_first_order(vec_x, vec_y_measured)
+    a_hat = mat_w_estimated[0][0]
+    b_hat = mat_w_estimated[1][0]
+
+    matrix.show_mat(mat_w, '%g')
+    matrix.show_mat(mat_w_estimated, '%g')
+
+    visualize_least_square_first_order(a_hat, b_hat, vec_x, vec_y, vec_y_measured)
+
+
+if __name__ == '__main__':
+    main()
