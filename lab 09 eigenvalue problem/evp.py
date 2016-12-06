@@ -4,11 +4,18 @@
 """
 고유치 문제 모듈 Eigenvalue Problem Module
 python 의 list의 list 을 이용하는 행렬로 구현함
+. File/Settings/ 대화 상자를 엶
+2. Tool 메뉴 아래에서 python Integrated Tools 를 엶
+3. Default test runner 로 Unittest 를 선택
+4. Project 창이 열려 있지 않으면 [alt +1] 으로 열기
+5. 해당 소스 코드를 담은 폴더를 오른쪽 마우스 클릭
+6. 아래쪽 "Mark Directory as" 선택
+7. "Sources Root" 선택
 """
 
 import math
 
-import gauss_jordan as g
+import gauss_jordan as gj
 import matrix
 
 

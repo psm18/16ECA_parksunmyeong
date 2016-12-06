@@ -193,7 +193,7 @@ def cholesky_decomposition(mat_a):
         for i in range(1, k):
             # initialize mat_l[k][i] * mat_l[i][i] with mat_a[k][i]
             #   later divide with mat_l[i][i] to get mat_l[k][i]
-            l_ki_l_ii mat_a[k][i]
+            l_ki_l_ii = mat_a[k][i]
             # dummy index column loop
             # j will have values 0 ~ (i-1)
             # inverse of matrix multiplication
